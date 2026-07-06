@@ -34,7 +34,7 @@ body {
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   background:
     radial-gradient(circle at 5% 5%, rgba(120, 168, 180, 0.28), transparent 30%),
-    radial-gradient(circle at 92% 10%, rgba(216, 182, 92, 0.18), transparent 30%),
+    radial-gradient(circle at 92% 10%, rgba(92, 154, 216, 0.18), transparent 30%),
     linear-gradient(145deg, #07111d 0%, #0d1c2b 48%, #08131f 100%);
   color: var(--white);
   overflow-x: hidden;
