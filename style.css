@@ -1650,3 +1650,233 @@ h1 {
     animation: none !important;
   }
 }
+/* =========================================================
+   PROFESSIONAL RESPONSIVE LAYOUT — MOBILE FIRST OVERRIDES
+   ========================================================= */
+:root {
+  --mobile-gap: 14px;
+  --mobile-radius: 20px;
+}
+
+.music-bars { display: inline-flex; }
+
+@media (max-width: 820px) {
+  .navbar { height: 70px; }
+  .nav-links {
+    top: 76px;
+    max-height: calc(100dvh - 94px);
+    overflow-y: auto;
+    box-shadow: 0 24px 70px rgba(0,0,0,.42);
+  }
+
+  .section {
+    width: min(100% - 28px, var(--max-width));
+    padding: 68px 0;
+  }
+
+  .hero {
+    padding: 112px 14px 52px;
+    min-height: auto;
+  }
+
+  .hero-grid { gap: 34px; }
+  h1 { font-size: clamp(42px, 10vw, 68px); }
+  .hero-lead { font-size: 16px; line-height: 1.7; }
+  .hero-actions { margin: 26px 0; }
+
+  .hero-meta {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .hero-meta div { padding: 14px 10px; text-align: center; }
+  .meta-value { font-size: 22px; }
+
+  .hero-visual { min-height: 500px; }
+  .profile-card { width: min(390px, 88vw); border-radius: 32px; }
+  .profile-frame { border-radius: 24px; }
+
+  .stats-band {
+    width: calc(100% - 28px);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin: 22px auto 0;
+    padding: 10px;
+    transform: none;
+  }
+  .stat-item { padding: 20px 10px; border-radius: 16px; }
+  .counter { font-size: 34px; }
+  .stat-item p { font-size: 13px; }
+
+  .section-heading { margin-bottom: 28px; }
+  .section-heading h2,
+  .value-panel h2,
+  .career-card h2,
+  .contact-card h2 { font-size: clamp(34px, 8vw, 50px); }
+
+  .pillar-grid,
+  .strength-grid,
+  .leadership-grid,
+  .project-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--mobile-gap);
+  }
+
+  .glass-card,
+  .strength-card,
+  .leadership-card {
+    min-height: 0;
+    padding: 20px;
+    border-radius: var(--mobile-radius);
+  }
+  .glass-card span,
+  .strength-card span,
+  .leadership-card span,
+  .value-list span,
+  .career-paths span { margin-bottom: 18px; font-size: 24px; }
+  .glass-card h3,
+  .strength-card h3,
+  .leadership-card h3,
+  .value-list h3,
+  .career-paths h3 { font-size: 20px; overflow-wrap: anywhere; }
+
+  .value-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .value-list article,
+  .career-paths article { padding: 20px; border-radius: 20px; }
+
+  .experience-layout { gap: 16px; }
+  .experience-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .exp-tab {
+    min-height: 78px;
+    padding: 14px;
+    font-size: 13px;
+    line-height: 1.35;
+  }
+  .exp-tab:hover,
+  .exp-tab.active { transform: none; }
+  .experience-detail { min-height: 0; padding: 26px; }
+
+  .project-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: 250px 210px;
+  }
+  .project-image.large { grid-column: span 2; grid-row: auto; }
+  .project-image,
+  .project-image.large { height: auto; }
+
+  .skills-grid { grid-template-columns: 1fr; }
+  .skill-column { padding: 26px; }
+  .skill-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .skill-list span { text-align: center; border-radius: 14px; font-size: 13px; }
+
+  .career-paths { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .career-paths article { padding: 17px; }
+  .career-paths h3 { font-size: 18px; }
+  .career-paths p { font-size: 13px; }
+
+  .contact-links { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .contact-links a:last-child { grid-column: span 2; }
+
+  .social-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .social-item { min-height: 150px; }
+}
+
+@media (max-width: 620px) {
+  body::before { background-size: 64px 64px, 100% 12px; }
+  .brand-text { display: inline; font-size: 14px; }
+  .brand-mark { width: 38px; height: 38px; border-radius: 12px; }
+
+  .hero { padding-top: 102px; }
+  .hero-copy { text-align: left; }
+  .eyebrow { font-size: 10px; letter-spacing: .11em; }
+  .eyebrow::before { width: 24px; }
+  h1 { font-size: clamp(39px, 12vw, 56px); line-height: .98; }
+
+  .hero-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .btn { width: 100%; min-height: 50px; padding: 0 14px; font-size: 13px; text-align: center; }
+  .hero-visual { min-height: auto; }
+  .profile-card { width: 100%; padding: 12px; border-radius: 26px; }
+  .profile-frame { aspect-ratio: 4 / 4.8; }
+  .profile-card-body { padding: 18px 6px 6px; }
+  .profile-card-body h2 { font-size: 25px; }
+
+  .about-grid { gap: 42px; }
+  .portrait-card { max-width: 430px; margin-inline: auto; border-radius: 26px; }
+  .portrait-card img { border-radius: 20px; }
+
+  .pillar-grid,
+  .strength-grid,
+  .leadership-grid,
+  .project-cards,
+  .value-list,
+  .social-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .glass-card,
+  .strength-card,
+  .leadership-card { padding: 17px; }
+  .glass-card p,
+  .strength-card p,
+  .leadership-card p,
+  .value-list p { font-size: 13px; line-height: 1.55; }
+
+  .value-panel,
+  .career-card,
+  .contact-card { padding: 24px; border-radius: 26px; gap: 26px; }
+
+  .timeline-item { padding: 20px; }
+  .timeline-item h3 { font-size: 21px; }
+
+  .experience-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .experience-detail h3 { font-size: 32px; }
+
+  .project-gallery { grid-template-rows: 220px 170px; gap: 12px; }
+  .project-image { border-radius: 18px; }
+  .project-image figcaption { left: 10px; bottom: 10px; font-size: 11px; padding: 8px 10px; }
+
+  .career-paths { grid-template-columns: 1fr; }
+  .career-paths article { padding: 20px; }
+  .career-paths p { font-size: 14px; }
+
+  .contact-links { grid-template-columns: 1fr; }
+  .contact-links a:last-child { grid-column: auto; }
+
+  .portfolio-social { padding: 58px 14px; }
+  .social-item {
+    min-height: 135px;
+    padding: 16px;
+    border-radius: 19px;
+  }
+  .social-icon { width: 42px; height: 42px; }
+  .social-arrow { top: 18px; right: 16px; }
+  .social-name { font-size: 15px; }
+
+  .site-footer { width: calc(100% - 28px); font-size: 13px; }
+  .music-control { right: 14px; bottom: 14px; }
+}
+
+@media (max-width: 390px) {
+  .brand-text { max-width: 150px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .hero-actions { grid-template-columns: 1fr; }
+  .pillar-grid { grid-template-columns: 1fr; }
+  .pillar-grid .glass-card { min-height: auto; }
+  .strength-card h3,
+  .leadership-card h3 { font-size: 17px; }
+  .strength-card p,
+  .leadership-card p { font-size: 12px; }
+  .experience-list { grid-template-columns: 1fr; }
+}
+
+@media (hover: none), (pointer: coarse) {
+  .social-item:hover,
+  .btn:hover,
+  .contact-links a:hover,
+  .project-image:hover img { transform: none; }
+}
