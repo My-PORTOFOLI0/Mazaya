@@ -1811,13 +1811,12 @@ h1 {
   .portrait-card img { border-radius: 20px; }
 
   .pillar-grid,
-  .strength-grid,
-  .leadership-grid,
-  .project-cards,
-  .value-list,
-  .social-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+.strength-grid,
+.leadership-grid,
+.project-cards,
+.value-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
 
   .glass-card,
   .strength-card,
@@ -1879,4 +1878,111 @@ h1 {
   .btn:hover,
   .contact-links a:hover,
   .project-image:hover img { transform: none; }
+}
+
+/* ==================================================
+   SOCIAL MEDIA HORIZONTAL SCROLL — TABLET & MOBILE
+================================================== */
+
+@media (max-width: 820px) {
+  .portfolio-social {
+    overflow: hidden;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .social-container {
+    width: 100%;
+  }
+
+  .social-grid {
+    display: flex;
+    grid-template-columns: none;
+
+    gap: 14px;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    padding: 4px 6px 20px;
+
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 6px;
+
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-inline: contain;
+
+    scrollbar-width: none;
+  }
+
+  .social-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .social-item {
+    flex: 0 0 calc(42% - 7px);
+    min-width: calc(42% - 7px);
+    min-height: 150px;
+
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+}
+
+@media (max-width: 620px) {
+  .portfolio-social {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .social-grid {
+    gap: 12px;
+
+    width: 100%;
+    padding-left: 4px;
+    padding-right: 32px;
+    padding-bottom: 18px;
+  }
+
+  .social-item {
+    flex: 0 0 80%;
+    min-width: 80%;
+    min-height: 135px;
+
+    padding: 18px;
+    border-radius: 20px;
+  }
+}
+
+@media (max-width: 390px) {
+  .portfolio-social {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .social-grid {
+    padding-right: 26px;
+  }
+
+  .social-item {
+    flex-basis: 84%;
+    min-width: 84%;
+  }
+}
+
+@media (max-width: 820px) {
+  .section,
+  .stats-band,
+  .site-footer {
+    width: calc(100% - 32px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 620px) {
+  .section,
+  .stats-band,
+  .site-footer {
+    width: calc(100% - 28px);
+  }
 }
